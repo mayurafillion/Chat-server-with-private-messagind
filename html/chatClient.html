@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+   <head>
+     <title>Assignment 3</title>
+      <style>
+      body {
+        background: #dddddd;
+      }
+
+      </style>
+   </head>
+
+  <body>
+    <h1>Messages:</h1>
+    <p id="connectionStatus">You are not connected to CHAT SERVER</p>
+    <div id="connectInput">
+      <input type="text" id="usernameField" name="username" value="" size = 20 />
+      <button id="connect_button">Connect As</button>
+    </div>
+    <br>
+    <div id="messages" style="height: 200px; width: 400px; overflow: auto; background: #dddddd; visibility: hidden;"></div>
+    <br>
+    <input type="text" id="messageField" placeholder="Send a message" value="" style="height: 20px; width: 400px; background: white; border-radius: 0.3125rem; padding: 5px;" disabled />
+    <br>
+    <br>
+    <button id="send_button" style="height: 30px; width: 300px; background: #1c89ff; color: white; border-radius: 0.3125rem;" disabled>SEND</button>
+    <button onclick="handleClear('messages')" id="clear_button" style="height: 30px; width: 100px; background: red; color: white; border-radius: 0.3125rem;" disabled>CLEAR</button>
+
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src='eventListeners.js'></script>
+    <script src='functions.js'></script>
+
+  </body>
+</html>
